@@ -1,110 +1,152 @@
 import Image from "next/image";
-import { FaBalanceScale, FaHandshake, FaUserShield } from "react-icons/fa";
+import {
+  FaBalanceScale,
+  FaHandshake,
+  FaUserShield,
+  FaAward,
+} from "react-icons/fa";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="bg-slate-50 py-24"
-    >
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-6 lg:flex-row">
+    <section id="about" className="bg-slate-50 py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
 
         {/* Left Image */}
 
-        <div className="w-full lg:w-1/2">
+        <div className="relative">
 
           <Image
             src="/images/about-image.jpg"
-            alt="Legal professionals meeting with a client"
-            width={600}
-            height={700}
-            className="h-[550px] w-full rounded-3xl object-cover shadow-xl"
+            alt="Moss & Associates"
+            width={650}
+            height={750}
+            className="rounded-[32px] object-cover shadow-2xl"
           />
+
+          {/* Floating Card */}
+
+          <div className="absolute -bottom-8 right-6 rounded-3xl bg-blue-950 px-8 py-6 text-white shadow-2xl">
+
+            <h3 className="text-4xl font-bold text-amber-400">
+              Trusted
+            </h3>
+
+            <p className="mt-2 text-sm">
+              Professional Legal Representation
+            </p>
+
+          </div>
 
         </div>
 
         {/* Right Content */}
 
-        <div className="w-full lg:w-1/2">
+        <div>
 
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-blue-800">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-amber-500">
             About Us
           </p>
 
-          <h2 className="text-4xl font-bold leading-tight text-slate-900 lg:text-5xl">
-            Dedicated To Protecting
-            <span className="block text-blue-900">
-              Your Rights
+          <h2 className="font-serif text-4xl font-bold leading-tight text-slate-900 lg:text-5xl">
+            Legal Representation Built On
+            <span className="block text-blue-950">
+              Trust & Integrity
             </span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600">
-            Moss & Associates is committed to providing professional,
-            ethical and client-focused legal services. We understand
-            that legal matters can be overwhelming, which is why we
-            work closely with every client to deliver trusted advice
-            and effective representation.
+          <p className="mt-8 text-lg leading-8 text-slate-600">
+            Moss & Associates is committed to providing trusted legal
+            representation with professionalism, integrity and personal
+            attention. We understand that every legal matter is unique,
+            which is why we take time to understand each client's needs
+            before developing the best legal strategy.
           </p>
 
           {/* Features */}
 
-          <div className="mt-10 space-y-6">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
 
             <div className="flex items-start gap-4">
-              <div className="rounded-xl bg-blue-100 p-3">
-                <FaBalanceScale className="text-2xl text-blue-900" />
+
+              <div className="rounded-xl bg-blue-950 p-4 text-amber-400">
+                <FaBalanceScale />
               </div>
 
               <div>
                 <h3 className="font-semibold text-slate-900">
-                  Experienced Representation
+                  Professional Advice
                 </h3>
 
-                <p className="mt-1 text-slate-600">
-                  Dedicated legal support with professionalism and integrity.
+                <p className="mt-2 text-sm text-slate-600">
+                  Clear legal guidance tailored to every client.
                 </p>
               </div>
+
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="rounded-xl bg-blue-100 p-3">
-                <FaHandshake className="text-2xl text-blue-900" />
+
+              <div className="rounded-xl bg-blue-950 p-4 text-amber-400">
+                <FaHandshake />
               </div>
 
               <div>
                 <h3 className="font-semibold text-slate-900">
-                  Client-Focused Service
+                  Client Focused
                 </h3>
 
-                <p className="mt-1 text-slate-600">
-                  Every case is handled with care, transparency and respect.
+                <p className="mt-2 text-sm text-slate-600">
+                  Building lasting relationships through trust.
                 </p>
               </div>
+
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="rounded-xl bg-blue-100 p-3">
-                <FaUserShield className="text-2xl text-blue-900" />
+
+              <div className="rounded-xl bg-blue-950 p-4 text-amber-400">
+                <FaUserShield />
               </div>
 
               <div>
                 <h3 className="font-semibold text-slate-900">
-                  Trusted Legal Advice
+                  Integrity
                 </h3>
 
-                <p className="mt-1 text-slate-600">
-                  Helping individuals make informed legal decisions with confidence.
+                <p className="mt-2 text-sm text-slate-600">
+                  Honest representation with your interests first.
                 </p>
               </div>
+
+            </div>
+
+            <div className="flex items-start gap-4">
+
+              <div className="rounded-xl bg-blue-950 p-4 text-amber-400">
+                <FaAward />
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-slate-900">
+                  Trusted Service
+                </h3>
+
+                <p className="mt-2 text-sm text-slate-600">
+                  Committed to achieving the best possible outcomes.
+                </p>
+              </div>
+
             </div>
 
           </div>
 
+          {/* CTA */}
+
           <a
             href="#contact"
-            className="mt-10 inline-block rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white transition duration-300 hover:bg-blue-800"
+            className="mt-12 inline-block rounded-xl bg-amber-500 px-8 py-4 font-semibold text-white transition hover:-translate-y-1 hover:bg-amber-600"
           >
-            Speak To Our Team
+            Speak With Our Team
           </a>
 
         </div>

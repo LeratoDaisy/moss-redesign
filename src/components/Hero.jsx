@@ -1,30 +1,24 @@
 import Image from "next/image";
-import { FaCarCrash, FaHospital, FaUserInjured } from "react-icons/fa";
+import { FaCarCrash, FaHospital, FaUserShield } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="flex min-h-[90vh] items-center bg-gradient-to-br from-white via-slate-50 to-blue-50"
+      className="bg-gradient-to-br from-white via-slate-50 to-blue-50"
     >
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-20 px-6 py-16 lg:flex-row lg:justify-between">
+      <div className="mx-auto flex min-h-[88vh] max-w-7xl flex-col items-center justify-between gap-16 px-6 py-16 lg:flex-row">
 
         {/* Left Content */}
-        <div className="max-w-xl">
+        <div className="max-w-2xl">
 
-          {/* Small Heading */}
-          <div className="mb-6 flex items-center gap-3">
-            <div className="h-[2px] w-10 bg-blue-800"></div>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-amber-500">
+            Johannesburg Attorneys
+          </p>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-800">
-              Johannesburg Attorneys
-            </p>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-5xl font-extrabold leading-tight text-slate-900 lg:text-6xl">
+          <h1 className="font-serif text-5xl font-bold leading-tight text-slate-900 md:text-6xl xl:text-7xl">
             Trusted Legal
-            <span className="block text-blue-900">
+            <span className="block text-blue-950">
               Representation
             </span>
             <span className="block">
@@ -32,82 +26,93 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Description */}
-          <p className="mt-6 text-lg leading-8 text-slate-600">
-            Moss & Associates provides trusted legal representation in
-            Road Accident Fund claims, Medical Negligence and Personal
-            Injury matters. We are committed to protecting your rights
-            with professionalism, integrity and client-focused service.
+          <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
+            Moss & Associates provides experienced legal representation in
+            Road Accident Fund claims, Medical Negligence and Personal Injury
+            matters. We are committed to protecting your rights with integrity,
+            professionalism and compassionate legal guidance.
           </p>
 
-          {/* Buttons */}
+          {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap gap-4">
 
             <a
               href="#contact"
-              className="rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-blue-800"
+              className="rounded-xl bg-amber-500 px-8 py-4 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-amber-600"
             >
-              Book a Consultation
+              Book Consultation
             </a>
 
             <a
-              href="#practice-areas"
-              className="rounded-xl border-2 border-blue-900 px-8 py-4 font-semibold text-blue-900 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-900 hover:text-white"
+              href="#practice"
+              className="rounded-xl border-2 border-blue-950 px-8 py-4 font-semibold text-blue-950 transition duration-300 hover:bg-blue-950 hover:text-white"
             >
-              Practice Areas
+              Explore Services
             </a>
 
           </div>
 
-          {/* Trust Points */}
-          <div className="mt-8 flex flex-wrap gap-6 text-sm font-medium text-slate-700">
-            <span>✓ Trusted Advice</span>
-            <span>✓ Client-Focused</span>
-            <span>✓ Professional Representation</span>
+          {/* Trust Badges */}
+          <div className="mt-12 flex flex-wrap gap-8 text-sm font-medium text-slate-700">
+
+            <div className="flex items-center gap-2">
+              <span className="text-amber-500">✔</span>
+              Client Focused
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-amber-500">✔</span>
+              Professional Advice
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-amber-500">✔</span>
+              Trusted Representation
+            </div>
+
           </div>
 
           {/* Service Cards */}
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <div className="rounded-3xl bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
-              <FaCarCrash className="mb-4 text-3xl text-blue-800" />
+              <FaCarCrash className="mb-4 text-3xl text-amber-500" />
 
-              <h3 className="font-semibold text-slate-900">
-                Road Accident Fund
+              <h3 className="mb-2 text-lg font-semibold text-blue-950">
+                RAF Claims
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                Dedicated legal representation for RAF claims and
-                compensation.
+              <p className="text-sm leading-6 text-slate-600">
+                Expert legal assistance for Road Accident Fund compensation.
               </p>
 
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <div className="rounded-3xl bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
-              <FaHospital className="mb-4 text-3xl text-blue-800" />
+              <FaHospital className="mb-4 text-3xl text-amber-500" />
 
-              <h3 className="font-semibold text-slate-900">
+              <h3 className="mb-2 text-lg font-semibold text-blue-950">
                 Medical Negligence
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-slate-600">
+              <p className="text-sm leading-6 text-slate-600">
                 Protecting clients affected by medical malpractice.
               </p>
 
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <div className="rounded-3xl bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
-              <FaUserInjured className="mb-4 text-3xl text-blue-800" />
+              <FaUserShield className="mb-4 text-3xl text-amber-500" />
 
-              <h3 className="font-semibold text-slate-900">
+              <h3 className="mb-2 text-lg font-semibold text-blue-950">
                 Personal Injury
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                Professional legal support when you need it most.
+              <p className="text-sm leading-6 text-slate-600">
+                Dedicated legal support when you need it most.
               </p>
 
             </div>
@@ -117,16 +122,32 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="w-full lg:w-[45%]">
+        <div className="relative w-full max-w-xl">
+
+          {/* Decorative Accent */}
+          <div className="absolute -top-6 -left-6 h-32 w-32 rounded-full bg-amber-400/20 blur-3xl"></div>
 
           <Image
             src="/images/hero-image.jpg"
             alt="Professional legal consultation"
-            width={600}
-            height={700}
+            width={650}
+            height={750}
             priority
-            className="h-[580px] w-full rounded-[32px] object-cover shadow-2xl transition duration-500 hover:scale-[1.02]"
+            className="rounded-[32px] object-cover shadow-2xl"
           />
+
+          {/* Floating Card */}
+          <div className="absolute -bottom-8 -left-8 rounded-2xl bg-white p-6 shadow-2xl">
+
+            <p className="text-4xl font-bold text-blue-950">
+              10+
+            </p>
+
+            <p className="mt-1 text-sm text-slate-600">
+              Years of Trusted Legal Experience
+            </p>
+
+          </div>
 
         </div>
 

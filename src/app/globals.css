@@ -1,11 +1,35 @@
 @import "tailwindcss";
 
+:root {
+  --navy: #0f2d5c;
+  --gold: #c89b3c;
+  --light: #f8fafc;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #5893cf;
-  color: #0f172a;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: white;
+  color: #1e293b;
+  font-family: var(--font-inter);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-playfair);
+}
+
+section {
+  overflow: hidden;
+}
+
+::selection {
+  background: #c89b3c;
+  color: white;
 }

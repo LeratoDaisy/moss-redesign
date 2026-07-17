@@ -1,34 +1,34 @@
 import {
   FaBalanceScale,
   FaUsers,
-  FaShieldAlt,
   FaHandshake,
+  FaAward,
 } from "react-icons/fa";
 
 const reasons = [
   {
     icon: <FaBalanceScale />,
-    title: "Experienced Legal Representation",
+    title: "Experienced Representation",
     description:
-      "Our team is committed to providing professional legal advice tailored to every client's unique circumstances.",
+      "We provide knowledgeable legal guidance backed by professionalism and a commitment to achieving the best possible outcome for every client.",
   },
   {
     icon: <FaUsers />,
-    title: "Client-Centred Approach",
+    title: "Client-Focused Approach",
     description:
-      "We believe every client deserves personal attention, honest communication and dedicated legal support.",
-  },
-  {
-    icon: <FaShieldAlt />,
-    title: "Integrity & Transparency",
-    description:
-      "We handle every matter with professionalism, ethics and complete transparency throughout the legal process.",
+      "Every client receives personal attention, clear communication and legal strategies tailored to their unique circumstances.",
   },
   {
     icon: <FaHandshake />,
-    title: "Committed To Justice",
+    title: "Integrity & Trust",
     description:
-      "Our focus is achieving fair outcomes while protecting the rights and interests of every client we represent.",
+      "We build lasting relationships through honesty, transparency and ethical legal practice.",
+  },
+  {
+    icon: <FaAward />,
+    title: "Committed to Excellence",
+    description:
+      "Our goal is to deliver high-quality legal services while protecting your rights every step of the way.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why"
-      className="bg-slate-900 py-24 text-white"
+      className="bg-blue-950 py-24 text-white"
     >
       <div className="mx-auto max-w-7xl px-6">
 
@@ -44,21 +44,21 @@ export default function WhyChooseUs() {
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
 
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-amber-400">
             Why Choose Us
           </p>
 
-          <h2 className="text-4xl font-bold lg:text-5xl">
-            Legal Support Built On
-            <span className="block text-blue-400">
-              Trust & Professionalism
+          <h2 className="font-serif text-4xl font-bold leading-tight md:text-5xl">
+            Trusted Legal Guidance
+            <span className="block text-amber-400">
+              Every Step Of The Way
             </span>
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-300">
-            At Moss & Associates, we combine legal expertise with
-            personalised service to provide trusted representation
-            when our clients need it most.
+            Choosing the right legal team can make all the difference.
+            At Moss & Associates, we combine professional expertise with
+            genuine care for every client we represent.
           </p>
 
         </div>
@@ -70,62 +70,52 @@ export default function WhyChooseUs() {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="rounded-3xl border border-slate-700 bg-slate-800 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
+              className="group rounded-3xl border border-blue-800 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-400 hover:bg-white/10"
             >
-              <div className="mb-5 inline-flex rounded-2xl bg-blue-900 p-4 text-3xl text-blue-300">
+
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500 text-3xl text-white transition group-hover:rotate-6">
                 {reason.icon}
               </div>
 
-              <h3 className="mb-3 text-2xl font-semibold">
+              <h3 className="mb-4 text-2xl font-semibold">
                 {reason.title}
               </h3>
 
               <p className="leading-7 text-slate-300">
                 {reason.description}
               </p>
+
             </div>
           ))}
 
         </div>
 
-        {/* Stats */}
+        {/* Bottom Banner */}
 
-        <div className="mt-20 grid grid-cols-2 gap-8 border-t border-slate-700 pt-12 text-center lg:grid-cols-4">
+        <div className="mt-20 rounded-[32px] bg-gradient-to-r from-amber-500 to-amber-400 px-10 py-10 shadow-2xl">
 
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">
-              100%
-            </h3>
-            <p className="mt-2 text-slate-300">
-              Client Commitment
-            </p>
-          </div>
+          <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
 
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">
-              Ethical
-            </h3>
-            <p className="mt-2 text-slate-300">
-              Legal Practice
-            </p>
-          </div>
+            <div>
 
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">
-              Trusted
-            </h3>
-            <p className="mt-2 text-slate-300">
-              Representation
-            </p>
-          </div>
+              <h3 className="font-serif text-3xl font-bold text-slate-900">
+                Need Trusted Legal Assistance?
+              </h3>
 
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">
-              Client
-            </h3>
-            <p className="mt-2 text-slate-300">
-              Focused
-            </p>
+              <p className="mt-3 max-w-2xl text-lg text-slate-800">
+                Our team is ready to discuss your matter, answer your
+                questions and help you understand your legal options.
+              </p>
+
+            </div>
+
+            <a
+              href="#contact"
+              className="rounded-xl bg-blue-950 px-8 py-4 font-semibold text-white transition duration-300 hover:bg-slate-900"
+            >
+              Schedule a Consultation
+            </a>
+
           </div>
 
         </div>

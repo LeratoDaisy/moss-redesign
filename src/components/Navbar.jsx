@@ -1,59 +1,95 @@
 "use client";
 
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Practice Areas", href: "#practice" },
+    { name: "Why Us", href: "#why" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+
         {/* Logo */}
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900">
+
+        <a href="#home" className="flex flex-col">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
             Moss & Associates
           </h1>
-          <p className="text-sm text-slate-600">Attorneys</p>
-        </div>
+
+          <span className="mt-1 w-fit border-t-2 border-amber-500 pt-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-600">
+            Attorneys
+          </span>
+        </a>
 
         {/* Desktop Navigation */}
-        <ul className="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">
-          <li><a href="#home" className="hover:text-yellow-600">Home</a></li>
-          <li><a href="#about" className="hover:text-yellow-600">About</a></li>
-          <li><a href="#practice" className="hover:text-yellow-600">Practice Areas</a></li>
-          <li><a href="#why" className="hover:text-yellow-600">Why Us</a></li>
-          <li><a href="#contact" className="hover:text-yellow-600">Contact</a></li>
-        </ul>
 
-        {/* CTA Button */}
+        <nav className="hidden items-center gap-10 md:flex">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="relative text-sm font-semibold text-slate-700 transition duration-300 hover:text-blue-900 after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {link.name}
+            </a>
+          ))}
+        </nav>
+
+        {/* CTA */}
+
         <a
           href="#contact"
-          className="hidden rounded-lg bg-yellow-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-yellow-700 md:block"
+          className="hidden rounded-xl bg-amber-500 px-6 py-3 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-amber-600 md:block"
         >
           Book Consultation
         </a>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
+
         <button
-          className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}
+          className="text-slate-900 md:hidden"
         >
-          ☰
+          {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
+
       {isOpen && (
         <div className="border-t bg-white md:hidden">
-          <ul className="flex flex-col gap-4 px-6 py-4">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#practice">Practice Areas</a></li>
-            <li><a href="#why">Why Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          <nav className="flex flex-col px-6 py-6">
+
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="border-b border-slate-100 py-4 font-medium text-slate-700 transition hover:text-blue-900"
+              >
+                {link.name}
+              </a>
+            ))}
+
+            <a
+              href="#contact"
+              className="mt-6 rounded-xl bg-amber-500 py-3 text-center font-semibold text-white"
+            >
+              Book Consultation
+            </a>
+
+          </nav>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
