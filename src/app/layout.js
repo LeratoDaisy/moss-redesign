@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: "Moss & Associates Attorneys",
   description:
-    "Trusted legal representation in Johannesburg.",
+    "Professional legal representation in Road Accident Fund, Medical Negligence and Personal Injury matters.",
 };
 
 export default function RootLayout({ children }) {
