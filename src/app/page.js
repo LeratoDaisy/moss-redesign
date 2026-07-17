@@ -5,6 +5,7 @@ import About from "../components/About";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import TrustSection from "../components/TrustSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyChooseUs />
       <Contact />
       <Footer />
+      <TrustSection />
     </>
   );
 }
